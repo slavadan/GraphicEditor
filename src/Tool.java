@@ -3,6 +3,17 @@ import java.awt.*;
 public abstract class Tool
 {
 
+    public Tool()
+    {
+
+    }
+
+    public Tool(Image img)
+    {
+        graphics = (Graphics2D) img.getGraphics();
+    }
+
+
     protected int currentX, currentY, oldX, oldY;
     protected Graphics2D graphics;
 

@@ -1,9 +1,7 @@
 import javax.swing.*;
 import java.awt.Color;
 import java.awt.Graphics;
-import java.awt.Graphics2D;
 import java.awt.Image;
-import java.awt.RenderingHints;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionAdapter;;
@@ -50,11 +48,18 @@ public class DrawArea extends JComponent {
         g.drawImage(image, 0, 0, null);
     }
 
+    public void changeTool(Tool nTool)
+    {
+        tool = nTool;
+    }
+
     public void clear() {
         tool.setColor(Color.white);
         tool.fillRect(0, 0, getSize().width, getSize().height);
         tool.setColor(Color.black);
         repaint();
     }
+
+    public Image getImage() { return image; }
 
 }

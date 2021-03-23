@@ -11,6 +11,7 @@ public abstract class Tool
 
     protected int currentX, currentY, oldX, oldY;
     protected Graphics2D graphics;
+    protected boolean changeColor = true;
 
     public abstract void draw();
 

@@ -61,5 +61,5 @@ public class DrawArea extends JComponent {
     }
 
     public Image getImage() { return image; }
-
+    public Tool getTool() { return tool; }
 }

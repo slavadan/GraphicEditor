@@ -6,7 +6,7 @@ import java.awt.event.ActionListener;
 public class ToolBar extends JToolBar {
 
     private DrawArea drawArea;
-    private JButton pencilButton, eraserButton, rectangleButton, circleButton, lineButton, loopButton;
+    private JButton pencilButton, eraserButton, rectangleButton, circleButton, lineButton;
 
     private ActionListener actionListener = new ActionListener() {
         @Override
@@ -41,6 +41,8 @@ public class ToolBar extends JToolBar {
 
         lineButton = new JButton(new ImageIcon("src/images/line.png"));
         lineButton.addActionListener(actionListener);
+
+        System.out.println(lineButton.getSize());
 
         this.add(pencilButton);
         this.add(eraserButton);
